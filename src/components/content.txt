@@ -1,0 +1,30 @@
+being sold:
+    glassware
+    Area rugs
+    Runners
+    wall deco
+    furniture
+    Objects
+    Merchandise
+
+pages:
+
+    product modal to add to Cart
+        description
+            add these items to an object
+
+    
+    products page
+        Sorting by type of items at the top
+            individual items products page
+
+
+    About Section
+
+    Blog Section 
+        Blog Posts
+
+    Cart Section
+        for each item in the global object, render in a scrollable column
+        tally up all the cost on the right side
+        if total cost is more than $200, add free shipping

@@ -1,0 +1,88 @@
+// color variables
+$textcolor: #a8501a
+$textcolor2: #1155c4
+$backgroundcolor: #fceec5
+
+
+@font-face 
+  font-family: 'Standard'
+  src: url('./components/Old_Standard_TT/OldStandardTT-Regular.ttf')
+  
+@font-face 
+  font-family: 'Standard-bold'
+  src: url('./components/Old_Standard_TT/OldStandardTT-Bold.ttf')
+
+body
+  color: $textcolor
+  background-color: $backgroundcolor
+  overflow-x: hidden !important
+h1
+  color: $textcolor !important
+
+h2 
+  font-family: 'Standard-bold'
+
+.nav-link
+  font-family: 'Arial'
+  color: $textcolor !important
+  font-weight: 100 !important
+.navbar-brand
+  font-family: 'Standard-bold'
+
+// .splash-curtain-row
+//   -webkit-transition: background-image 0.2s linear !important
+//   transition: background-image 0.2s linear !important
+.splash-container
+  transition-duration: 0.4s !important
+
+  button 
+    font-family: 'Standard-bold'
+    font-size: larger
+    color: white
+
+  .curtain-heading
+    text-align: start
+    color: #1155c4
+  .curtain-subtext
+    text-shadow: 2px 0px 1px #797979d2
+    font-size: larger
+  .curtain-description
+    font-family: 'Standard'
+    color: #000000c8
+    text-shadow: 1px 2px 4px #ffffff3b
+  .link
+    color: #000000
+
+.splash-curtain-row
+  height: 87vh
+
+.curtain-btn
+  height: 100%
+  wdith: 100%
+  background-color: #77777700
+  border: solid #ffffff78 0.2px 
+  color: black
+  transition-duration: 0.2s
+  &:active
+    background-color: #dfdfdf7d
+
+.selected-btn 
+  coloe: black
+  transition-duration: 0.2s
+  background-color: #ffffff40
+  backdrop-filter: blur(0.2px)
+
+.link
+  text-decoration: none !important
+
+.arrivals-container 
+  background-color: $textcolor
+  color: $backgroundcolor
+
+.product-img
+  height: 50vh
+  width: auto
+
+.alert-shipping 
+  background-color: $textcolor2
+  color: white
