@@ -24,7 +24,7 @@ const handleClick = (image) => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
         }}>
-      <div className='col-6 col-md-2 curtain-col mx-0 px-0'>
+      <div className='col-6 col-md-4 col-lg-2 curtain-col mx-0 px-0'>
         <button
             onClick={() => handleClick(glassware)}
             className={`col-12 d-flex curtain-btn ${
@@ -41,7 +41,7 @@ const handleClick = (image) => {
                                                 : <p className='curtain-subtext'>Glassware</p>}
         </button>
       </div>
-      <div className='col-6 col-md-2 curtain-col mx-0 px-0'>
+      <div className='col-6 col-md-4 col-lg-2  curtain-col mx-0 px-0'>
       <button
             onClick={() => handleClick(arearugs)}
             className={`col-12 d-flex curtain-btn ${
@@ -58,7 +58,7 @@ const handleClick = (image) => {
                                                 : <p className='curtain-subtext'>Area Rugs</p>}
         </button>
       </div>
-      <div className='col-6 col-md-2 curtain-col mx-0 px-0'>
+      <div className='col-6 col-md-4 col-lg-2  curtain-col mx-0 px-0'>
       <button
             onClick={() => handleClick(runners)}
             className={`col-12 d-flex curtain-btn ${
@@ -75,7 +75,7 @@ const handleClick = (image) => {
                                                 :  <p className='curtain-subtext'>Runners</p>}
         </button>
       </div>
-      <div className='col-6 col-md-2 curtain-col mx-0 px-0'>
+      <div className='col-6 col-md-4 col-lg-2  curtain-col mx-0 px-0'>
       <button
             onClick={() => handleClick(walldeco)}
             className={`col-12 d-flex curtain-btn ${
@@ -92,7 +92,7 @@ const handleClick = (image) => {
                                                 :  <p className='curtain-subtext'>Wall Decor</p>}
         </button>
       </div>
-      <div className='col-6 col-md-2 curtain-col mx-0 px-0'>
+      <div className='col-6 col-md-4 col-lg-2  curtain-col mx-0 px-0'>
       <button
             onClick={() => handleClick(furniture)}
             className={`col-12 d-flex curtain-btn ${
@@ -109,7 +109,7 @@ const handleClick = (image) => {
                                                 :  <p className='curtain-subtext'>Furniture</p>}
         </button>
       </div>
-      <div className='col-6 col-md-2 curtain-col mx-0 px-0'>
+      <div className='col-6 col-md-4 col-lg-2  curtain-col mx-0 px-0'>
       <button
             onClick={() => handleClick(objects)}
             className={`col-12 d-flex curtain-btn ${

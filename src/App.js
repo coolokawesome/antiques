@@ -11,7 +11,7 @@ const App = () => (
   <Router>
     <div class="alert-shipping alert alert-dismissible fade show py-2 text-center rounded-0 mb-0" role="alert">
       <strong>Free</strong> shipping on all orders over $200
-      <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close">
+      <button type="button" className="btn-close mb-4 btn btn-sm text-light pt-1 text-light" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true"></span>
       </button>
     </div>
@@ -26,19 +26,19 @@ const App = () => (
         <div className="collapse navbar-collapse text-center flex-grow-1" id="navbarNav">
           <ul className="navbar-nav ms-md-auto">
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/shop">Shop</NavLink>
+              <NavLink className="nav-link" activeClassName="active" to="/shop">SHOP</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/about">About</NavLink>
+              <NavLink className="nav-link" activeClassName="active" to="/about">ABOUT</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/blog">Blog</NavLink>
+              <NavLink className="nav-link" activeClassName="active" to="/blog">BLOG</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/contact">Contact</NavLink>
+              <NavLink className="nav-link" activeClassName="active" to="/contact">CONTACT</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/cart">Cart <i class="fa-solid fa-cart-shopping"></i> </NavLink>
+              <NavLink className="nav-link" activeClassName="active" to="/cart"> <i class="fa-solid fa-cart-shopping"></i> </NavLink>
             </li>
           </ul>
         </div>
