@@ -3,8 +3,8 @@ import { Link, NavLink, Routes, Route, BrowserRouter as Router } from 'react-rou
 import glassware from '../imgs/glassware.jpg'
 import arearugs from '../imgs/arearugs.webp'
 import furniture from '../imgs/furniture.jpeg'
-import runners from '../imgs/runner.webp'
-import walldeco from '../imgs/walldeco.jpeg'
+import runners from '../imgs/runner.png'
+import walldeco from '../imgs/walldeco.jpg'
 import objects from '../imgs/objects.jpeg'
 
 import { useState } from 'react'
@@ -25,6 +25,7 @@ const handleClick = (image) => {
         backgroundRepeat: 'no-repeat'
         }}>
       <div className='col-6 col-md-4 col-lg-2 curtain-col mx-0 px-0'>
+        {backgroundImage === glassware ? <h1 className='main-header display-1'>Timeless Elegance.</h1> : <></>}
         <button
             onClick={() => handleClick(glassware)}
             className={`col-12 d-flex curtain-btn ${

@@ -1,50 +1,45 @@
 // color variables
 $textcolor: #a8501a
 $textcolor2: #1155c4
-$backgroundcolor: #fceec5
-
-
+$cream: #fceec5
+$green: #6a7740
 @font-face 
   font-family: 'Standard'
-  src: url('./components/Old_Standard_TT/OldStandardTT-Regular.ttf')
-  
+  src: url('./components/Fonts/OldStandardTT-Regular.ttf')
 @font-face 
   font-family: 'Standard-bold'
-  src: url('./components/Old_Standard_TT/OldStandardTT-Bold.ttf')
-
+  src: url('./components/Fonts/OldStandardTT-Bold.ttf')
+@font-face 
+  font-family: 'Prata'
+  src: url('./components/Fonts/Prata-Regular.ttf')
 body
   color: $textcolor
-  background-color: $backgroundcolor
+  background-color: $cream
   overflow-x: hidden !important
-h1
+h1, .designtext
   color: $textcolor !important
-
 h2 
   font-family: 'Standard-bold'
-
 .nav-link
   font-family: 'Arial'
   color: $textcolor !important
   font-weight: 100 !important
 .navbar-brand
   font-family: 'Standard-bold'
-
 // .splash-curtain-row
 //   -webkit-transition: background-image 0.2s linear !important
 //   transition: background-image 0.2s linear !important
 .splash-container
   transition-duration: 0.4s !important
-
   button 
     font-family: 'Standard-bold'
     font-size: larger
     color: white
-
   .curtain-heading
     text-align: start
     color: #1155c4
   .curtain-subtext
-    text-shadow: 2px 0px 1px #797979d2
+    text-shadow: 0px 0px 5px #000000d2
     font-size: larger
   .curtain-description
     font-family: 'Standard'
@@ -52,55 +47,55 @@ h2
     text-shadow: 1px 2px 4px #ffffff3b
   .link
     color: #000000
-
 .splash-curtain-row
   height: 87vh
-
+  position: relative
+.main-header
+  position: absolute
+  top: 5%
+  left: 2%
+  z-index: 1
+  font-family: 'Prata'
+  color: $textcolor2 !important
 .curtain-btn
   height: 100%
   wdith: 100%
   background-color: #77777700
-  border: solid #ffffff78 0.2px 
+  border: solid white 0px
+  border-right: solid #ffffff59 0.5px 
   color: black
   transition-duration: 0.2s
   &:active
-    background-color: #dfdfdf7d
-
+    background-color: #dfdfdfac
 .selected-btn 
-  coloe: black
+  color: black
   transition-duration: 0.2s
-  background-color: #ffffff40
+  background-color: #ffffff97
   backdrop-filter: blur(0.2px)
-
 .link
   text-decoration: none !important
-
 .arrivals-container 
-  background-color: $textcolor
-  color: $backgroundcolor
-
+  background-color:$textcolor
+  color: $cream
 .product-img
   height: 50vh
   width: auto
-
 .alert-shipping 
-  background-color: $textcolor2
+  background-color:$textcolor2
   color: white
-
 .about-us-text
   font-size: large
-
 .collections-container
-  background-color: $textcolor
-  color: $backgroundcolor
-  backdrop-filter: blur(3px)
+  background-color:$textcolor
+  color: $cream
   .collections-header
     color: $textcolor2
     font-family: 'Standard-bold'
   .collections-subtext
-    text-shadow: 1px 1px 1px #ffffffd2
-    font-size: x-large
-    font-family: 'Standard'
+    text-shadow: 1px 2px 4px #ffffffd2
+    font-size: large
+    font-family: 'Standard-bold'
+    color: black !important
   .collections-link
     font-family: 'Standard-bold'
     font-weight: 800
@@ -108,19 +103,25 @@ h2
     color: #161616
     text-decoration: none
 .collection-item-container
-  border: 0.5px solid white
-.collection-item-container2
-  height: 50vh
-  border: 0.5px solid white
-
-.collection-item-container
-
+  background-size: 130% auto !important
+  transition: background-size 0.3s ease-in-out !important
+  &:hover
+    transition-duration: 0.4s !important
+    background-size: 135% auto !important
+.collections-row 
+  height:40vh
 .footer-title
   font-family: 'Standard-bold'
-
 .footer-link
   color: $textcolor !important
-
 a:hover 
   cursor: pointer
+@media (max-width: 1250px) 
+  .collections-row 
+    height: 30vh
+@media (max-width: 767px )
+  .collections-row 
+    height: 70vh
 
+
+  
