@@ -9,11 +9,21 @@ import Contact from './components/Contact';
 
 const App = () => (
   <Router>
-    <div class="alert-shipping alert alert-dismissible fade show py-2 text-center rounded-0 mb-0" role="alert">
-      <strong>Free</strong> shipping on all orders over $200
-      <button type="button" className="btn-close mb-4 btn btn-sm text-light pt-1 text-light" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true"></span>
-      </button>
+    <div class="row d-flex justify-content-between py-2 rounded-0 mb-0">
+      <div className='col-6 d-flex justify-content-start'>
+        <div className='d-flex align-items-center'>
+        <i></i><p className='mini-header-item align-items-center align-items-center my-0 me-3'>subscribe</p>
+        <div className='align-items-center my-0'>
+          <a><i class="fa-brands fa-facebook align-items-center me-1"></i></a></div>
+          <a><i class="fa-brands fa-instagram align-items-center me-1"></i></a>
+        </div>
+      </div>
+      <div className='col-6 d-flex justify-content-end '>
+        <div className='d-flex'>
+       <div className='d-flex align-items-center'> <i class="fa-solid fa-envelope align-items-center"></i><p className='mini-header-item align-items-center my-0'>contact</p></div>
+        <div className='d-flex align-items-center me-3'><i class="fa-solid fa-phone align-items-center my-0 ms-3"></i><p className='mini-header-item align-items-center my-0'>{'(416) 802-8842'}</p></div>
+        </div>
+      </div>
     </div>
     <nav className="navbar navbar-expand-md">
       <div className="container-md d-flex py-2 justify-content-center justify-content-md-end align-items-center">
