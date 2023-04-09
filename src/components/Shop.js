@@ -1,4 +1,4 @@
-import {useState, useContext} from 'react'
+import {useState, useContext, useEffect} from 'react'
 import ShopCollections from './ShopCollections'
 import SplashContainer from './SplashContainer'
 import Objects from './Objects/Objects'
@@ -6,10 +6,20 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CartList from './Objects/CartList';
 import Footer from './Footer'
+import glassimg from '../imgs/shopglass.avif'
+import rugimg from '../imgs/shoprugs.avif'
+import runnerimg from '../imgs/shoprunners.png'
+import decorimg from '../imgs/shopwalldecor.webp'
+import furnitureimg from '../imgs/shopfurniture.webp'
+import objctimg from '../imgs/shopobjects.jpeg'
+
+
+
 function Shop() {
   //hooks
   const [show, setShow] = useState(false)
   const [modalInfo, setModalInfo] = useState('')
+  const [shopImg, setShopImg] = useState()
 
   //handle closing of modal
   const handleClose = () => {
@@ -25,14 +35,14 @@ function Shop() {
   };
   const handleCart = () => {
     console.log('cart item name: ' + modalInfo);
-    let cartItemName = modalInfo
-    CartList.push(cartItemName)
-    setShow(false)
-    console.log('CART: ' + CartList)
+    let cartItemName = modalInfo;
+    CartList.push(cartItemName);
+    setShow(false);
+    console.log('CART: ' + CartList);
   }
   //populate the url value for the item search
-  let URLvalue = window.location.search
-  let shopValue = URLvalue.replace('?=', '')
+  let URLvalue = window.location.search;
+  let shopValue = URLvalue.replace('?=', '');
 
   let objectArray = [];
   let objectCount = 0;
@@ -42,9 +52,29 @@ function Shop() {
       {
         objectArray.push(Objects[i])
         objectCount++
-      }
-  }
+      };
+  };
+  useEffect(() => {
+    switch (shopValue) {
+      case "Glass":     setShopImg(glassimg); break;
+      case "Rugs":      setShopImg(rugimg); break;
+      case "Runners":   setShopImg(runnerimg); break;
+      case "Decor":     setShopImg(decorimg); break;
+      case "Furniture": setShopImg(furnitureimg); break;
+      case "Objects":   setShopImg(objctimg); break;
+      default:          setShopImg(null);
+    }
+  }, []);
+
   return (
+    <>
+    <div className='shop-img' style={{
+      backgroundImage: 'url(' + shopImg + ')',
+      backdropFilter: 'brightness(0.5) contrast(1.2)', // add the filter using backdrop-filter
+      backgroundColor: 'rgba(0, 0, 0, 0.5)', // add a fallback background color for older browsers
+
+    }}>
+    </div>
     <div className='container'>
     <h2 className='display-4 text-center mb-5 mt-2 shop-header'>{shopValue}</h2>
     {shopValue == 'Glass' ? <p className='shop-text'>Shop from a wide variety of antique and vintage glass</p> : <></>}
@@ -57,12 +87,14 @@ function Shop() {
           (value) => (
             <div className='col-6 col-md-4 col-lg-3 item-card p-2'>
               <div className='item-card-inner p-4'>
-              <img className='img img-fluid border-3 item-img' src={value.img}></img>
+              <a id={value.id} onClick={handleShow}>
+              <img className='img img-fluid border-3 item-img' id={value.id} src={value.img}></img>
+              </a >
               <h5 className='my-0 text-center item-desc'>{value.name}</h5>
               <p className='py-0 text-black text-center'>${value.price}.00</p>
-              <div className='d-flex justify-content-center'>
+              {/* <div className='d-flex justify-content-center'>
                 <button className='product-button' id={value.id} onClick={handleShow}>See More</button>
-              </div>
+              </div> */}
               </div>
             </div>
           )
@@ -95,6 +127,7 @@ function Shop() {
       </Modal>
       <Footer />
     </div>
+    </>
   )
 }
 export default Shop

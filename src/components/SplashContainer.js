@@ -71,7 +71,7 @@ const handleClick = (image) => {
                                                 <h3 className='curtain-heading'>RUNNERS</h3>
                                                 <div className='col-12 curtain-description text-start'>Great for any corridor</div>
                                                 <div className='col-12 text-start mt-3'> 
-                                                    <Link className='link' to='/Shop?=Rugs'>Shop {'>'}</Link>
+                                                    <Link className='link' to='/Shop?=Runners'>Shop {'>'}</Link>
                                                     </div>
                                                 </div> 
                                                 :  <p className='curtain-subtext'>Runners</p>}
