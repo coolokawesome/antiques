@@ -25,12 +25,12 @@ function Cart() {
 
   return (
     <div className='container'>
-      <h2>Shopping Cart</h2>
+      <h2>Checkout</h2>
       <ul>
         {cartList.map((item, index) => (
           <li key={index}>
             {item.name}, ${item.price}
-            <button onClick={() => removeItem(index)}>remove</button>
+            <button onClick={() => removeItem(index)} className=' mx-3 remove-button'>remove</button>
           </li>
         ))}
       </ul>

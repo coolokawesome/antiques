@@ -1,9 +1,9 @@
-center the home button in header 
-add shop dropdown
-https://antiquewebsitedesign.com/demo/clean/
-fix the bottom selection masonry 
-add margins as borders
-subscribe mini header with envelope, facebook and instagram logos
-on the right side, contact and phone number with icons
-add welcoming modal for 15% of first order with coupon at checkout
-add links to navbar items
+create new items in the object category
+create secondary buttons
+format checkout section
+add cart icon functionality
+format modal for each item (text styling, prettify)
+main section about us 
+main section "collections"
+add blog page
+add contact page

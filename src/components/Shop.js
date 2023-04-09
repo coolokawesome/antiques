@@ -55,11 +55,11 @@ function Shop() {
       {
         objectArray.map(
           (value) => (
-            <div className='col-6 col-md-4 item-card p-2'>
+            <div className='col-6 col-md-4 col-lg-3 item-card p-2'>
               <div className='item-card-inner p-4'>
               <img className='img img-fluid border-3 item-img' src={value.img}></img>
-              <h5 className=' text-center item-desc'>{value.name}</h5>
-              <p className='text-muted text-center'>${value.price}</p>
+              <h5 className='my-0 text-center item-desc'>{value.name}</h5>
+              <p className='py-0 text-black text-center'>${value.price}.00</p>
               <div className='d-flex justify-content-center'>
                 <button className='product-button' id={value.id} onClick={handleShow}>See More</button>
               </div>
