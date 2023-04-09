@@ -1,5 +1,5 @@
 import React from 'react'
-import Objects from './Objects'
+import Objects from './Objects/Objects'
 
 function NewArrivals() {
   return (

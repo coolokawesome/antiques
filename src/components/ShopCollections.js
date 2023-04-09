@@ -1,4 +1,4 @@
-import React from 'react'
+import {useContext, useState} from 'react'
 import { Link } from 'react-router-dom'
 import Shop from './Shop'
 import glass1 from '../imgs/glass1.jpg'
@@ -28,7 +28,7 @@ function ShopCollections() {
               <p className='collections-subtext text-dark col-8'>
                 Experience the allure of Italian glass and elevate your space.
               </p>
-              <Link to='/Shop?=Glass' className='collections-link'>Shop this collection {'>'}</Link>
+              <Link to='/Shop?=Glass' onClick={null} className='collections-link'>Shop this collection {'>'}</Link>
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start collection-item-container"

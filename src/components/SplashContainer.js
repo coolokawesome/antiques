@@ -11,7 +11,6 @@ import { useState } from 'react'
 function SplashContainer() {
 const [backgroundImage, setBackgroundImage] = useState(glassware)
 
-
 const handleClick = (image) => {
     setBackgroundImage(image);
 }
@@ -25,9 +24,11 @@ const handleClick = (image) => {
         backgroundRepeat: 'no-repeat'
         }}>
       <div className='col-6 col-md-4 col-lg-2 curtain-col mx-0 px-0'>
-        {backgroundImage === glassware ? <h1 className='main-header display-1'>Timeless Elegance.</h1> : <></>}
+        {backgroundImage === glassware ? <h1 className='main-header display-1'>
+          {/* Timeless Elegance. */}
+          </h1> : <></>}
         <button
-            onClick={() => handleClick(glassware)}
+            onClick={() => handleClick(glassware, 'glassware')}
             className={`col-12 d-flex curtain-btn ${
               backgroundImage == glassware ? 'selected-btn align-items-center justify-content-center' : 'align-items-end justify-content-center'
             }`}
