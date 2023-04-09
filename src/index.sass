@@ -1,7 +1,7 @@
 // color variables
 $textcolor: #a8611a
 $textcolor2: #1155c4
-$cream: #fffcf5
+$cream: #f7f1e3
 $green: #6a7740
 @font-face 
   font-family: 'Standard'
@@ -20,6 +20,8 @@ h1, .designtext
   color: $textcolor !important
 h2 
   font-family: 'Standard-bold'
+.shop-header
+  border-bottom: 3px solid #c2c2c2
 .nav-link
   font-family: 'Arial'
   color: $textcolor !important
@@ -127,14 +129,38 @@ a:hover
   // shop section
 .item-card
   justify-content: center
+  .item-card-inner
+   background-color: white !important
+
   img
+    display: flex
     object-fit: scale-down
     background-image: cover
     object-fit: cover
-    height: 400px
-    width: 400px
+    height: 300px
+    width: 900px
+    border: 1px solid #e9d2ae6f !important
+  .item-desc
+    font-family: "Standard-bold"
+    font-size: xx-large
+    height: 10vh
+
 
 .modal-dialog
   margin-top: 30px
   max-width: 90vw !important
   justify-content: center !important
+
+.product-button, .cart-button 
+  width: 50%
+  background-color: $textcolor2
+  border: 1px solid #00000000
+  border-radius: 10px
+  color: $cream
+  padding: 7px
+  transition-duration: 0.3s
+  &:hover
+    transition-duration: 0.3s
+    background-color: #293e9a
+    transform: scale(1.04)
+    box-shadow: 1px 4px 9px #45454555

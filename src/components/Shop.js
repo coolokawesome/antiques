@@ -5,7 +5,7 @@ import Objects from './Objects/Objects'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import CartList from './Objects/CartList';
-
+import Footer from './Footer'
 function Shop() {
   //hooks
   const [show, setShow] = useState(false)
@@ -35,25 +35,35 @@ function Shop() {
   let shopValue = URLvalue.replace('?=', '')
 
   let objectArray = [];
+  let objectCount = 0;
 
   for(let i = 0; i < Objects.length; i++) {
     if (Objects[i].category === shopValue)
       {
         objectArray.push(Objects[i])
+        objectCount++
       }
   }
   return (
     <div className='container'>
-    <h2 className='text-center'>{shopValue}</h2>
+    <h2 className='display-4 text-center mb-5 mt-2 shop-header'>{shopValue}</h2>
+    {shopValue == 'Glass' ? <p className='shop-text'>Shop from a wide variety of antique and vintage glass</p> : <></>}
+    {shopValue == 'Rugs' ? <p className='shop-text'>Shop from a wide variety of antique and vintage rugs</p> : <></>}
+    {<h5>Showing <nobr className='text-primary'>{objectCount}</nobr> result{objectCount > 1 || objectCount == 0 ? <>s</> : <></>}:</h5>}
     {
     <div className='row'>
       {
         objectArray.map(
           (value) => (
-            <div className='col-6 col-md-4 item-card'>
-              <img className='img img-fluid border-3 rounded-4 item-img' src={value.img}></img>
-              <h3 className='text-center item-desc'>{value.name}</h3>
-              <button className='product-button' id={value.id} onClick={handleShow}>See More</button>
+            <div className='col-6 col-md-4 item-card p-2'>
+              <div className='item-card-inner p-4'>
+              <img className='img img-fluid border-3 item-img' src={value.img}></img>
+              <h5 className=' text-center item-desc'>{value.name}</h5>
+              <p className='text-muted text-center'>${value.price}</p>
+              <div className='d-flex justify-content-center'>
+                <button className='product-button' id={value.id} onClick={handleShow}>See More</button>
+              </div>
+              </div>
             </div>
           )
         )
@@ -76,13 +86,14 @@ function Shop() {
             <p>{modalInfo.desc}</p>
             <p className='text-muted'>{modalInfo.desc2}</p>
             <div className='row d-flex justify-content-around'>
-            <button className='col-12 col-md-5' onClick={handleCart}>Add To Cart</button>
-            <button className='col-12 col-md-5' onClick={handleClose}>Close</button>
+            <button className='col-12 col-md-5 cart-button' onClick={handleCart}>Add To Cart</button>
+            <button className='col-12 col-md-5 close-button' onClick={handleClose}>Close</button>
             </div>
           </div>
         </div>
         </Modal.Body>
       </Modal>
+      <Footer />
     </div>
   )
 }

@@ -34,7 +34,7 @@ const handleClick = (image) => {
             }`}
           >
             {backgroundImage == glassware ? <div className='container row'>
-                                                <h3 className='curtain-heading'>GLASSWARE</h3>
+                                                <h3 className='curtain-heading'>GLASS</h3>
                                                 <div className='col-12 curtain-description text-start'>Shop Murano, Salviati and more</div>
                                                 <div className='col-12 text-start mt-3'> 
                                                     <Link className='link' to='/Shop?=Glass'>Shop {'>'}</Link>
