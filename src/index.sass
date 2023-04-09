@@ -21,7 +21,6 @@ h1, .designtext
 h2 
   font-family: 'Standard-bold'
 .shop-header
-  border-bottom: 1px solid #c2c2c2
 .nav-link
   font-family: 'Arial'
   color: $textcolor !important
@@ -132,7 +131,6 @@ a:hover
   .item-card-inner
    background-color:  !important
    min-height: 10vh
-
   img
     display: flex
     object-fit: scale-down
@@ -141,12 +139,17 @@ a:hover
     height: 300px
     width: 900px
     border: 1px solid #e9d2ae6f !important
+    transition-delay: 0.1s
+    transition-duration: 0.3s
+    margin-bottom: 5px
+    &:hover
+      transition-delay: 0.1s
+      transition-duration: 0.3s ease
+      transform: scale(1.05)
   .item-desc
     font-family: "Standard-bold"
     color: black
     font-size: xx-large
-    
-
 
 .modal-dialog
   margin-top: 30px
@@ -166,3 +169,10 @@ a:hover
     background-color: #293e9a
     transform: scale(1.04)
     box-shadow: 1px 4px 9px #45454555
+.shop-img
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center center
+  height: 20vh
+  width: auto
+  
