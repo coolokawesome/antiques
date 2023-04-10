@@ -68,17 +68,19 @@ function Shop() {
 
   return (
     <>
-    <div className='shop-img' style={{
-      backgroundImage: 'url(' + shopImg + ')',
-      backdropFilter: 'brightness(0.5) contrast(1.2)', // add the filter using backdrop-filter
-      backgroundColor: 'rgba(0, 0, 0, 0.5)', // add a fallback background color for older browsers
-
-    }}>
-    </div>
-    <div className='container'>
-    <h2 className='display-4 text-center mb-5 mt-2 shop-header'>{shopValue}</h2>
-    {shopValue == 'Glass' ? <p className='shop-text'>Shop from a wide variety of antique and vintage glass</p> : <></>}
+    <div className='shop-img d-flex align-items-center justify-content-center container' style={{}}>
+      <div className='text-center my-2 '>
+        <h2 className='display-1 shop-header py-0 my-0 px-4'>{shopValue}</h2>
+        {shopValue == 'Glass' ? <b><p className='shop-text text-center'>Shop from a wide variety of antique and vintage glass</p></b> : <></>}
     {shopValue == 'Rugs' ? <p className='shop-text'>Shop from a wide variety of antique and vintage rugs</p> : <></>}
+
+      </div>   
+    </div>
+
+    <div className='container mt-5'>
+    {/* <h2 className='display-4 text-center mb-5 mt-2 shop-header'>{shopValue}</h2> */}
+    {/* {shopValue == 'Glass' ? <p className='shop-text'>Shop from a wide variety of antique and vintage glass</p> : <></>}
+    {shopValue == 'Rugs' ? <p className='shop-text'>Shop from a wide variety of antique and vintage rugs</p> : <></>} */}
     {<h5>Showing <nobr className='text-primary'>{objectCount}</nobr> result{objectCount > 1 || objectCount == 0 ? <>s</> : <></>}:</h5>}
     {
     <div className='row'>
