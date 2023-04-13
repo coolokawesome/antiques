@@ -106,11 +106,18 @@ h2
 .collection-item-container
   background-size: 130% auto !important
   transition: background-size 0.3s ease-in-out !important
+  height: 50vh
+.collection-item-container2
+  background-size: 430% auto !important
+  transition: background-size 0.3s ease-in-out !important
+  height: 100vh !important
+
   &:hover
     transition-duration: 0.4s !important
     background-size: 135% auto !important
 .collections-row 
   height:40vh
+
 .footer-title
   font-family: 'Standard-bold'
 .footer-link
@@ -120,10 +127,9 @@ a:hover
 @media (max-width: 1250px) 
   .collections-row 
     height: 30vh
-@media (max-width: 767px )
+@media (max-width: 991px )
   .collections-row 
     height: 70vh
-
 
   // shop section
 .item-card
