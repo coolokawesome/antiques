@@ -33,8 +33,8 @@ function ShopCollections() {
         <h2 className='text-center display-2'>Shop Collections</h2>
         <div class="container">
   <div class="row">
-    <div class="col-lg-6 mb-4">
-      <div className='align-items-center h-100 collection-item-container2' style={{ backgroundImage: 'url(' + glass1 + ')',backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', transition: 'background-size 0.3s ease-in-out !important', }}>
+    <div class="col-lg-6 p-0">
+      <div className='align-items-center collection-item-container1' style={{ backgroundImage: 'url(' + glass1 + ')',backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', transition: 'background-size 0.3s ease-in-out !important', }}>
       <h3 className='collections-header display-5'>Italian Glass</h3>
               <p className='collections-subtext text-dark col-8'>
                 Experience the allure of Italian glass and elevate your space.
@@ -42,11 +42,11 @@ function ShopCollections() {
               <Link to='/Shop?=Glass' onClick={null} className='collections-link'>Shop this collection {'>'}</Link>
     </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 p-0">
       <div class="row">
-        <div class="col-lg-12 mb-4">
-          <div className='align-items-center '>
-          <div className='align-items-center collection-item-container' style={{ backgroundImage: 'url(' + glass1 + ')',backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', transition: 'background-size 0.3s ease-in-out !important', }}>
+        <div class="col-lg-12">
+          <div className='align-items-center'>
+          <div className='align-items-center collection-item-container2' style={{ backgroundImage: 'url(' + glass1 + ')',backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', transition: 'background-size 0.3s ease-in-out !important', }}>
       <h3 className='collections-header display-5'>Italian Glass</h3>
               <p className='collections-subtext text-dark col-8'>
                 Experience the allure of Italian glass and elevate your space.
@@ -55,8 +55,8 @@ function ShopCollections() {
     </div>
           </div>
         </div>
-        <div class="col-lg-12 mb-4"><div className='align-items-center'>
-        <div className='align-items-center collection-item-container' style={{ backgroundImage: 'url(' + glass1 + ')',backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', transition: 'background-size 0.3s ease-in-out !important', }}>
+        <div class="col-lg-12"><div className='align-items-center'>
+        <div className='align-items-center collection-item-container3' style={{ backgroundImage: 'url(' + glass1 + ')',backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', transition: 'background-size 0.3s ease-in-out !important', }}>
       <h3 className='collections-header display-5'>Italian Glass</h3>
               <p className='collections-subtext text-dark col-8'>
                 Experience the allure of Italian glass and elevate your space.

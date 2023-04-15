@@ -1,7 +1,9 @@
 // color variables
 $textcolor: #a8611a
-$textcolor2: #1155c4
-$cream: #f2e5c6
+$textcolor2: #2a6ad2
+$textcolor3: #734d15 
+$cream: #f2e5c6 
+$cream2: #f2e5c6 
 $green: #6a7740
 @font-face 
   font-family: 'Standard'
@@ -18,6 +20,7 @@ body
   overflow-x: hidden !important
 h1, .designtext
   color: $textcolor !important
+  font-family: 'Standard-bold'
 h2 
   font-family: 'Standard-bold'
 .shop-header
@@ -49,7 +52,7 @@ h2
   .link
     color: #000000
 .splash-curtain-row
-  height: 87vh
+  height: 90vh
   position: relative
 .main-header
   position: absolute
@@ -63,11 +66,14 @@ h2
   wdith: 100%
   background-color: #77777700
   border: solid white 0px
-  border-right: solid #ffffff59 0.5px 
+  border-right: solid #ffffff59 1px 
   color: black
   transition-duration: 0.2s
   &:active
     background-color: #dfdfdfac
+  &:hover
+    background-color: #dfdfdf6f
+    cursor: pointer
 .selected-btn 
   color: black
   transition-duration: 0.2s
@@ -89,6 +95,7 @@ h2
 .collections-container
   background-color:$textcolor
   color: $cream
+  padding-bottom: 8px
   .collections-header
     color: $textcolor2
     font-family: 'Standard-bold'
@@ -103,20 +110,29 @@ h2
     font-size: x-large
     color: #161616
     text-decoration: none
-.collection-item-container
-  background-size: 130% auto !important
+.collection-item-container1, .collection-item-container2, .collection-item-container3
+  background-size: 230% auto !important
   transition: background-size 0.3s ease-in-out !important
-  height: 50vh
-.collection-item-container2
-  background-size: 430% auto !important
-  transition: background-size 0.3s ease-in-out !important
-  height: 100vh !important
-
   &:hover
     transition-duration: 0.4s !important
-    background-size: 135% auto !important
-.collections-row 
-  height:40vh
+    background-size: 235% auto !important
+
+.collection-item-container1
+  margin-bottom:0px 
+  padding-top:4px
+  margin-right:4px
+  height: calc(80vh + 8px)
+.collection-item-container2
+  margin-right: 0px
+  margin-left: 4px
+  margin-bottom:4px
+  height: 40vh
+.collection-item-container3
+  margin-top:4px
+  margin-right:0px
+  margin-left: 4px
+  margin-bottom: 0px
+  height: 40vh
 
 .footer-title
   font-family: 'Standard-bold'
@@ -175,6 +191,16 @@ a:hover
     background-color: #293e9a
     transform: scale(1.04)
     box-shadow: 1px 4px 9px #45454555
+
+.close-button
+  width: 50%
+  background-color: white
+  border: 1px solid $textcolor2
+  border-radius: 10px
+  color: $textcolor2
+  padding: 7px
+  transition-duration: 0.3s
+
 .shop-img
   background-color: $cream
   color: $textcolor
@@ -190,3 +216,46 @@ a:hover
   font-size: large
   color: $textcolor
   padding-bottom: 9px 
+
+.subscribe
+  font-size: small
+  a
+    
+    color: $textcolor3
+    text-decoration: none
+.fa-lg
+
+  color: $textcolor3
+.small-header-container
+  background-color: $cream2
+.shipping-container
+  .btn-close 
+    padding:0px !important
+    padding-top: 8px !important
+    padding-left: 16px !important
+.modal-content
+  border-radius: 0px
+.promo-container
+  color: white
+  height: 80vh
+  font-family: 'Outfit' !important
+  text-shadow: 2px 2px 1px  #4b4b4b
+  h1 h2
+    font-family: 'Outfit-bold' !important
+    color: $textcolor2 !important
+  h4
+    b
+      color: #ffffff
+.promo-button
+  background-color: $textcolor2
+  border: 0px 
+  border-radius: 4px
+  color: white
+  font-family: 'Outfit-bold'
+  transition-duration: 0.2s
+  width: 20%
+  height: 48px
+  &:hover
+    background-color: #1f61cc
+    box-shadow: 2px 2px 10px #00000065
+    transform: translateY(-3px)

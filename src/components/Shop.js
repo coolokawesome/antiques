@@ -72,11 +72,9 @@ function Shop() {
       <div className='text-center my-2 '>
         <h2 className='display-1 shop-header py-0 my-0 px-4'>{shopValue}</h2>
         {shopValue == 'Glass' ? <b><p className='shop-text text-center'>Shop from a wide variety of antique and vintage glass</p></b> : <></>}
-    {shopValue == 'Rugs' ? <p className='shop-text'>Shop from a wide variety of antique and vintage rugs</p> : <></>}
-
+        {shopValue == 'Rugs' ? <p className='shop-text'>Shop from a wide variety of antique and vintage rugs</p> : <></>}
       </div>   
     </div>
-
     <div className='container mt-5'>
     {/* <h2 className='display-4 text-center mb-5 mt-2 shop-header'>{shopValue}</h2> */}
     {/* {shopValue == 'Glass' ? <p className='shop-text'>Shop from a wide variety of antique and vintage glass</p> : <></>}
@@ -119,9 +117,9 @@ function Shop() {
             <h2>{modalInfo.price}</h2>
             <p>{modalInfo.desc}</p>
             <p className='text-muted'>{modalInfo.desc2}</p>
-            <div className='row d-flex justify-content-around'>
-            <button className='col-12 col-md-5 cart-button' onClick={handleCart}>Add To Cart</button>
-            <button className='col-12 col-md-5 close-button' onClick={handleClose}>Close</button>
+            <div className='row'>
+            <button className='col-12 col-md-4 cart-button' onClick={handleCart}>Add To Cart</button>
+            <button className='col-12 col-md-4 close-button' onClick={handleClose}>Close</button>
             </div>
           </div>
         </div>

@@ -85,8 +85,8 @@ const handleClick = (image) => {
             }`}
           >
             {backgroundImage == walldeco ? <div className='container row'>
-                                                <h3 className='curtain-heading'>WALL DECOR</h3>
-                                                <div className='col-12 curtain-description text-start'>Vintage and Antique posters</div>
+                                                <h3 className='curtain-heading'>DECORATIVE</h3>
+                                                <div className='col-12 curtain-description text-start'>Vintage and Antique decor</div>
                                                 <div className='col-12 text-start mt-3'> 
                                                     <Link className='link' to='/Shop?=Decor'>Shop {'>'}</Link>
                                                     </div>
