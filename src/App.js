@@ -57,11 +57,12 @@ function App() {
       </div>
     </div> */}
     <nav className="navbar navbar-expand-md">
-      <div className="container-md d-flex py-0 justify-content-center justify-content-md-end align-items-center">
+      <div className="container-md d-flex py-0 justify-content-end justify-content-md-end align-items-center">
         <Link className="navbar-brand" to="/">
           <h1 className="display-6 me-5">Chambéry Antiques</h1>
         </Link>
-        <button className="navbar-toggler ms-5" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse text-center flex-grow-1" id="navbarNav">
