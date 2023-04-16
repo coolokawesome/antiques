@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CartList from './Objects/CartList';
-
+import Footer from './Footer';
 function Cart() {
   const [cartList, setCartList] = useState(CartList);
 
@@ -14,7 +14,7 @@ function Cart() {
     // Remove the deleted item from the CartList object as well
     CartList.splice(index, 1);
   };
-  
+
   const calculateTotalPrice = () => {
     let totalPrice = 0;
     for (let i = 0; i < cartList.length; i++) {
@@ -24,18 +24,39 @@ function Cart() {
   };
 
   return (
-    <div className='container'>
-      <h2>Checkout</h2>
-      <ul>
-        {cartList.map((item, index) => (
-          <li key={index}>
-            {item.name}, ${item.price}
-            <button onClick={() => removeItem(index)} className=' mx-3 remove-button'>remove</button>
-          </li>
-        ))}
-      </ul>
-      <p>Total Price: ${calculateTotalPrice()}</p>
-    </div>
+    <>
+      <div className='container checkout-container mt-4'>
+
+        <div className='row'>
+          <div className='col-12 col-lg-8'>
+            <h2>Checkout</h2>
+            <div className='checkout-list pb-2'>
+              {cartList.map((item, index) => (
+                <div key={index} className='mx-4 row checkout-box d-flex py-3'>
+                  <div className='col-3 checkout-img '>
+                  <img src={item.img} className='img img-thumbnail'></img>
+                  </div>
+                  <div className='col-9 checkout-desc'>
+                    <div className='d-flex justify-content-between'><h4><b>${item.price}.00</b></h4><button onClick={() => removeItem(index)} className=' mx-3 btn-close'></button></div>
+                    
+                  <h5>{item.name}</h5>
+                  <p className='text-muted'>category: {item.category}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='col-12 col-lg-4'>
+            <h2>Total</h2>
+            <div className='total-container container'>
+              sub-total
+            </div>
+          </div>
+        </div>
+        <p><b>Sub-total: ${calculateTotalPrice()}</b></p>
+      </div>
+      <Footer />
+    </>
   );
 }
 
