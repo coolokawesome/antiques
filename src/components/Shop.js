@@ -104,22 +104,27 @@ function Shop() {
     }
       <p className='text-muted text-center'>end of results</p>
       {/* modal */}
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className='px-0'>
         <Modal.Header closeButton>
+          <h5 className='modal-category'>Shop {'>'} {modalInfo.category}</h5>
         </Modal.Header>
         <Modal.Body>
         <div className='row'>
-          <div className='col-5'>
+          <div className='col-12 col-lg-6 d-flex justify-content-center'>
             <img className='img img-fluid' src={modalInfo.img}></img>
           </div>
-          <div className='col-7'>
-            <h3>{modalInfo.name}</h3>
-            <h2>{modalInfo.price}</h2>
-            <p>{modalInfo.desc}</p>
-            <p className='text-muted'>{modalInfo.desc2}</p>
-            <div className='row'>
+          <div className='col-12 col-lg-6 text-center text-lg-start'>
+            <div className='modal-title  mb-5'>
+            <h1 className='modal-name'>{modalInfo.name}</h1>
+            <h2 className='modal-price'><b>$</b>{modalInfo.price}.00</h2>
+            </div>
+            <p className='modal-desc'>{modalInfo.desc}</p>
+            <p className='modal-desc2'>{modalInfo.desc2}</p>
+            <div className='row mt-5'>
+            <div>
             <button className='col-12 col-md-4 cart-button' onClick={handleCart}>Add To Cart</button>
             <button className='col-12 col-md-4 close-button' onClick={handleClose}>Close</button>
+            </div>
             </div>
           </div>
         </div>
