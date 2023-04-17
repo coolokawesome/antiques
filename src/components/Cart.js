@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CartList from './Objects/CartList';
 import Footer from './Footer';
+import cards from '../imgs/weaccept.png'
 function Cart() {
   const [cartList, setCartList] = useState(CartList);
   const [subtotal, setSubtotal] = useState(0)
@@ -95,13 +96,13 @@ useEffect(() => {
 
   return (
     <>
-      <div className='container checkout-container pb-5 mt-4'>
+      <div className='container checkout-container pb-2 mt-4'>
 
         <div className='row'>
           <div className='col-12 col-lg-8'>
-            <h2>Checkout</h2>
+            <h2 className='checkout-header2'>Checkout</h2>
             <div className='checkout-list pb-2'>
-              {cartList.length == 0 ? <>Nothing to show!</> : cartList.map((item, index) => (
+              {cartList.length == 0 ? <><h1 className='my-5'>Nothing to show!</h1></> : cartList.map((item, index) => (
                 <div key={index} className='mx-4 row checkout-box d-flex py-3'>
                   <div className='col-3 checkout-img '>
                   <img src={item.img} className='img img-thumbnail'></img>
@@ -117,7 +118,7 @@ useEffect(() => {
             </div>
           </div>
           <div className='col-12 col-lg-4'>
-            <h2>Total</h2>
+            <h2 className='checkout-header2'>Total</h2>
             <div className='total-container container d-flex justify-content-between'>
               <h6 className='pt-3'>Sub-Total:</h6>
               <p className='pt-3'>${subtotal}.00</p>
@@ -135,20 +136,31 @@ useEffect(() => {
                 }
             </div>
             <div className='total-container container'>
-              <h6 className='py-1'>Discount Code</h6>
+              <h6 className='py-1'>Discount Code:</h6>
                 <form onSubmit={handleDiscountCheck}>
                   <input onChange={handleDiscountValue} className='col-8 form-control form-control-sm' id='discount'></input>
-                  <button className='btn btn-outline-primary my-2'>check</button>
+                  <button className='btn btn-outline-primary my-2 col-12'>check</button>
                 </form>
             </div>
-            <div className='total-container container d-flex justify-content-between'>
-              <h6 className='py-1'>Total:</h6>
-              <p>${absolutetotal}</p>
-            </div>
-            <div className='total-container container text-end text-lg-center pb-4'>
+            <div className='total-container container text-center'>
             {
-              discountcodeElegible == true ? <>you just saved ${saved} with code '<b>SPRING</b>' !</> : <></>
+              discountcodeElegible == true ? <>you just saved <b>${saved}</b> with code '<b>SPRING</b>'!</> : <></>
             }
+            </div>
+            <div className='total-container container d-flex justify-content-between pt-5'>
+              
+              <h6 className=''>Total:</h6>
+              <p className=''>${absolutetotal}</p>
+            </div>
+            <div className='total-container container text-end text-lg-center '>
+
+            </div>
+            <div className='total-container'>
+              
+              <a target='_blank' href={'https://www.sandbox.paypal.com/checkoutnow?sessionID=uid_594ed90697_mda6mdu6ndc&buttonSessionID=uid_0e9e57fb5d_mda6mdy6mjk&stickinessID=uid_0d796c10c1_mda6mdu6ndc&inlinexo=false&smokeHash=&token=0SN93902KX570362A&fundingSource=paypal&buyerCountry=US&locale.x=en_US&commit=false&enableFunding.0=paylater&clientID=ATssuyeiKXrkPP1TfoIcMXMoLBIO7ps9B2HN34eiAuhIuktEMTX0m_IVahzN3Ep3OXA8L33o0LxkkhiN&env=sandbox&sdkMeta=eyJ1cmwiOiJodHRwczovL3d3dy5wYXlwYWwuY29tL3Nkay9qcz9jbGllbnQtaWQ9QVRzc3V5ZWlLWHJrUFAxVGZvSWNNWE1vTEJJTzdwczlCMkhOMzRlaUF1aEl1a3RFTVRYMG1fSVZhaHpOM0VwM09YQThMMzNvMEx4a2toaU4mY29tbWl0PWZhbHNlJmN1cnJlbmN5PVVTRCZkaXNhYmxlLWZ1bmRpbmc9Y2FyZCZlbmFibGUtZnVuZGluZz1wYXlsYXRlciZidXllci1jb3VudHJ5PVVTJmxvY2FsZT1lbl9VUyZjb21wb25lbnRzPW1lc3NhZ2VzLGJ1dHRvbnMiLCJhdHRycyI6eyJkYXRhLXVpZCI6InVpZF9iZnZyaHB5ZXZ4ZXF1aXVpc2FodHJiamhpb3piangifX0&xcomponent=1&version=5.0.363'}><button className='checkout-button col-12 mb-1'>Purchase</button></a>
+            </div>
+            <div className='total-container pb-5 px-3'>
+              <img className='cc justify-content-center' src={cards}></img>
             </div>
           </div>
         </div>

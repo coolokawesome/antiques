@@ -1,6 +1,7 @@
 // color variables
 $textcolor: #a8611a
-$textcolor2: #2a6ad2
+$textcolor2: rgb(12, 110, 253)
+$texthover: rgb(12, 86, 197)
 $textcolor3: #734d15 
 $cream: #f2e5c6 
 $cream2: #f2e5c6 
@@ -194,36 +195,45 @@ a:hover
   border: 0px 
   border-radius: 4px
   color: white
-  font-family: 'Standard-bold'
-  font-size: larger !important
-  transition-duration: 0.2s
+  transition-duration: 0.3s
   width: 40%
-  height: 48px
+  height: 38px
   margin-left: 10px
   margin-right: 10px
-  box-shadow: 1px 1px 5px #00000065
+  box-shadow: 1px 1px 2px #00000065
   &:hover
-    background-color: #1f61cc
-    box-shadow: 0px 2px 10px #00000065
-    transform: translateY(-3px)
+    background-color: $texthover
+    box-shadow: 0px 1px 2px #00000065
 
 .close-button
   background-color: #ffffff00
-  border: 3px solid $textcolor2
+  border: 1px solid $textcolor2
   border-radius: 4px
   color: $textcolor2
-  font-family: 'Standard-bold'
-  font-size: larger !important
-  transition-duration: 0.2s
+  transition-duration: 0.3s
   width: 40%
-  height: 48px
+  height: 38px
   margin-left: 10px
   margin-right: 10px
-  box-shadow: 1px 1px 5px #00000065
+  box-shadow: 1px 1px 2px #00000065
   &:hover
-    
-    box-shadow: 0px 2px 5px #00000065
-    transform: translateY(-3px)
+    border: 1px solid $texthover
+    background-color:  $texthover
+    color: white
+    box-shadow: 0px 2px 2px #00000065
+
+.checkout-button
+  background-color: $textcolor2
+  border: 0px 
+  border-radius: 4px
+  color: white
+  transition-duration: 0.3s
+  width: 94%
+  margin-left: 3%
+  margin-right: 3%
+  height: 38px
+  &:hover
+    background-color: $texthover
 
 .shop-img
   background-color: $cream
@@ -293,6 +303,8 @@ a:hover
     background-color: #1f61cc
     box-shadow: 0px 2px 10px #00000065
     transform: translateY(-3px)
+.checkout-header2
+  border-bottom: 1px solid #b4b4b4
 .checkout-container
   border-bottom: 1px solid #b4b4b4
 .checkout-list
@@ -306,3 +318,6 @@ a:hover
   background-color: #fff1dc
 .img-thumbnail
   height:100px 
+.cc
+  width:50%
+  height: auto

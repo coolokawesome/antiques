@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link, NavLink, Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import About from './components/About';
+import AboutPage from './components/AboutPage'
 import Blog from './components/Blog';
 import Home from './components/Home';
 import Shop from './components/Shop';
@@ -9,6 +10,7 @@ import Contact from './components/Contact';
 import { NavDropdown, Alert, Modal } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router-dom';
 import promoBg from './imgs/shopfurniture.png'
+import Footer from './components/Footer';
 
 
 function App() {
@@ -89,7 +91,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Shop" element={<Shop />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/about" element={<AboutPage />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/contact" element={<Contact />} />
