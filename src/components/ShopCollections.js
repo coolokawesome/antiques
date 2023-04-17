@@ -46,20 +46,20 @@ function ShopCollections() {
       <div class="row">
         <div class="col-lg-12">
           <div className='align-items-center'>
-          <div className='align-items-center collection-item-container2' style={{ backgroundImage: 'url(' + glass1 + ')',backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', transition: 'background-size 0.3s ease-in-out !important', }}>
-      <h3 className='collections-header display-5'>Italian Glass</h3>
+          <div className='align-items-center collection-item-container2' style={{ backgroundImage: 'url(' + poster1 + ')',backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', transition: 'background-size 0.3s ease-in-out !important', }}>
+      <h3 className='collections-header display-5'>Wall Art</h3>
               <p className='collections-subtext text-dark col-8'>
-                Experience the allure of Italian glass and elevate your space.
+                Shop from a wide variety of vintage posters
               </p>
               <Link to='/Shop?=Glass' onClick={null} className='collections-link'>Shop this collection {'>'}</Link>
     </div>
           </div>
         </div>
         <div class="col-lg-12"><div className='align-items-center'>
-        <div className='align-items-center collection-item-container3' style={{ backgroundImage: 'url(' + glass1 + ')',backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', transition: 'background-size 0.3s ease-in-out !important', }}>
-      <h3 className='collections-header display-5'>Italian Glass</h3>
+        <div className='align-items-center collection-item-container3' style={{ backgroundImage: 'url(' + rug1 + ')',backgroundPosition: 'center',backgroundSize: 'cover', backgroundRepeat: 'no-repeat', transition: 'background-size 0.3s ease-in-out !important', }}>
+      <h3 className='collections-header display-5'>Runners</h3>
               <p className='collections-subtext text-dark col-8'>
-                Experience the allure of Italian glass and elevate your space.
+                Find that statement Rug.
               </p>
               <Link to='/Shop?=Glass' onClick={null} className='collections-link'>Shop this collection {'>'}</Link>
     </div>
