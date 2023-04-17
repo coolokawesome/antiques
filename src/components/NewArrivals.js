@@ -4,7 +4,7 @@ import Objects from './Objects/Objects'
 function NewArrivals() {
   return (
     <div className='arrivals-container'>
-        <div className='container row d-flex justify-content-center mx-auto'>
+        <div className='container row d-flex align-items-center mx-auto'>
             <h2 className='text-center display-2'>New Arrivals</h2>
             <div className='col-6 col-lg-3 arrival-container'>
                 <div className=''>
