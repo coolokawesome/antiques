@@ -1,1 +1,2 @@
-add objects, finish blog and about section
+Finish Blog section
+Finish Contact section
