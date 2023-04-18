@@ -28,7 +28,7 @@ function Footer() {
                             <a>CONTACT</a>
                         </div>
                         <div className='col-12'>
-                            <a>
+                            <a >
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </a>
                         </div>
