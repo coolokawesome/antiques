@@ -35,36 +35,22 @@ function App() {
 
   return (
   <Router>
-        <div className='shipping-container'>
+
+    <nav className="navbar fixed-top navbar-expand-md">
+    <div className='shipping-container '>
         {showShipping && (
-        <Alert className='mb-0 rounded-0 text-center my-0 py-0' style={{backgroundColor: '#1155c4', color: '#f2e5c6 '}} variant="light" onClose={() => setShowShipping(false)} dismissible>
+        <Alert className='mb-4 rounded-0 text-center my-0 py-0' style={{backgroundColor: '#1155c4', color: '#f2e5c6 '}} variant="light" onClose={() => setShowShipping(false)} dismissible>
           <p className="mb-0">
            <b>FREE</b> shipping on all orders over 200!{' '}
           </p>
         </Alert>
       )}
         </div>
-    {/* <div className='d-none d-lg-block small-header-container py-1'>
-      <div className='container'>
-      <div className='row d-flex justify-content-between'>
-        <div className=' header-items header-items-left col-6 d-flex'>
-          <div className='subscribe me-4'><a href='#'><div><i class="fa-lg fa-solid fa-envelope"></i> Subscribe</div></a></div>
-          <div className='subscribe'><a href='#'><i class="fa-lg fa-brands fa-facebook pe-2"></i></a></div>
-          <div className='subscribe'><a href='#'><i class="fa-lg fa-brands fa-instagram pe-2"></i></a></div>
-        </div>
-        <div className='header-items header-items-right col-6 d-flex justify-content-end'>
-        <div className='subscribe'><a href='#'><div><i class="fa-lg fa-solid fa-phone pe-1"></i> {'+1 (192) 168-0001'}</div></a></div>
-        </div>
-      </div>
-      </div>
-    </div> */}
-    <nav className="navbar navbar-expand-md">
-      <div className="container-md d-flex py-0 justify-content-end justify-content-md-end align-items-center">
+      <div className="mt-2 container-md d-flex py-0 justify-content-end justify-content-md-end align-items-center">
         <Link className="navbar-brand" to="/">
-          <h1 className="display-6 me-5">Chambéry Antiques</h1>
+          <h1 className="display-6">Chambéry Antiques</h1>
         </Link>
         <button className="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse text-center flex-grow-1" id="navbarNav">
