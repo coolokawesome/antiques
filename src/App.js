@@ -94,7 +94,7 @@ function App() {
         </Alert>
       )}
       {/* promo modal */}
-      <Modal show={show} onHide={handleClose}  >
+      <Modal show={show} onHide={handleClose} size='xl' >
         <Modal.Body className='border border-5' style={{backgroundImage: 'url(' + promoBg + ')', backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'}}>

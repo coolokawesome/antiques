@@ -16,7 +16,7 @@ const handleClick = (image) => {
 }
 
   return (
-    <div className='splash-container'>
+    <div className='splash-container my-auto'>
     <div className='row splash-curtain-row' id='splashcurtain' style={{
         backgroundImage: 'url(' + backgroundImage + ')',
         backgroundPosition: 'center',

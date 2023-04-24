@@ -85,16 +85,13 @@ function Shop() {
       {
         objectArray.map(
           (value) => (
-            <div className='col-6 col-md-4 col-lg-3 item-card p-2'>
-              <div className='item-card-inner p-4'>
+            <div className='col-12 col-md-6 col-lg-4 col-xl-3 item-card p-1'>
+              <div className='item-card-inner p-1'>
               <a id={value.id} onClick={handleShow}>
               <img className='img img-fluid border-3 item-img' id={value.id} src={value.img}></img>
               </a >
               <h5 className='my-0 text-center item-desc'>{value.name}</h5>
-              <p className='py-0 text-black text-center'>${value.price}.00</p>
-              {/* <div className='d-flex justify-content-center'>
-                <button className='product-button' id={value.id} onClick={handleShow}>See More</button>
-              </div> */}
+              <p className='py-0 text-primary text-center'>${value.price}.00</p>
               </div>
             </div>
           )
@@ -104,7 +101,7 @@ function Shop() {
     }
       <p className='text-muted text-center'>end of results</p>
       {/* modal */}
-      <Modal show={show} onHide={handleClose} className='px-0'>
+      <Modal show={show} onHide={handleClose} className='px-0' size='xl'>
         <Modal.Header closeButton>
           <h5 className='modal-category'>Shop {'>'} {modalInfo.category}</h5>
         </Modal.Header>
